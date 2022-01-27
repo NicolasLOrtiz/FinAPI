@@ -1,9 +1,5 @@
-import { ICustomer } from "../../interfaces/ICustomer";
-
-declare global {
-  declare namespace Express {
-    export interface Request {
-      customer: ICustomer;
-    }
+declare namespace Express {
+  export interface Request {
+    customer: import("../../interfaces/ICustomer").ICustomer;
   }
 }
